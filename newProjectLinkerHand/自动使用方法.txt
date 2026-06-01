@@ -1,0 +1,5 @@
+# 给执行权限
+chmod +x monitor.sh
+
+# 运行脚本
+./monitor.sh
