@@ -52,7 +52,7 @@ def initAndCalculateHours():
             bar = "\033[32m#\033[0m" * filled_len + "\033[31m-\033[0m" * (process_barLen - filled_len)
             print(f"\r进度: \033[31m|\033[0m{bar}\033[31m|\033[0m {percent:.1f}%", end="")
             time.sleep(0.2)
-        # clear_screen() # 保留数据故禁用
+        clearScreen() # 保留数据故禁用
         print('\n')
         print('''||-------------------------------------------------------------------------------||''')
         print("   当前\033[1;33m任务名称\033[0m：",'\033[31m',missionName,'\033[0m',sep='')
@@ -68,18 +68,18 @@ def initAndCalculateHours():
         print('''||-------------------------------------------------------------------------------||''')
         print()
         # print("\033[32m绿\033[0m","\033[31m红\033[0m","\033[1;33m黄_加粗\033[0m") # 测
-def setup_color():
+def setupColor():
     # 判win还是Lin
     if sys.platform == "win32":
         os.system('')
         return True
     return True
-def clear_screen():
+def clearScreen():
     # 判win还是Lin
     if os.name == 'nt':
         os.system('cls')
     else:
         os.system('clear')
 if __name__ == "__main__":
-    setup_color()
+    setupColor()
     initAndCalculateHours()
