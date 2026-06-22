@@ -4,7 +4,7 @@ chmod +x monitor.sh
 # 运行脚本
 sudo bash monitor.sh
 
-# 注意：文件夹中的count.csv是例子
+# 注意：文件夹中的count.csv是例子，使用calculateHours.py文件时需要将该文件复制并放入collection_data文件中
 
 //--------------------------------------------------------------------//
 
@@ -20,8 +20,26 @@ sudo bash monitor.sh
 # sudo bash autoTime.sh  
 # sudo bash autoTransform.sh
 
-# 注意：v1.2目前存在bug，多任务时只能显示第一回遍历到的任务名，bug将会在1.3中修复
+# 注意：v1.2目前存在bug，多任务时只能显示第一回遍历到的任务名，bug将会在1.4中修复
 
 //--------------------------------------------------------------------//
 
+# v1.3更新
+# 脚本更新
+
+# 注意：现在autoTime.sh和autoTransform.sh两个脚本均可以一键执行，但是autoTransform.sh执行之前需要改：自己的备份文件夹名称 uuid 组员名称三个地方
+	{
+	 echo "/opt/linkerhand/ws_src/collection_data"
+	 echo "/home/linkerhand/DataResult_20260616_lmt_zyx" <= 自己的备份文件夹名称
+	 echo "c5fdf2f2-a7ea-4626-9f17-6387c204c6ea" <= 自己的uuid
+	 echo "zyx_lmt" <= 自己的组员名称
+	 echo "y"
+	} | python convert_upload.py
+
+# 运行脚本方式照旧
+# chmod +x autoTime.sh
+# sudo bash autoTime.sh  
+# sudo bash autoTransform.sh
+
+//--------------------------------------------------------------------//
 

@@ -1,0 +1,4 @@
+/opt/linkerhand/ws_src/collection_data
+/home/linkerhand/DataResult_20260615_lmt_zyx
+c5fdf2f2-a7ea-4626-9f17-6387c204c6ea
+zyx_lmt
