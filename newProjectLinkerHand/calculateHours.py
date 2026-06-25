@@ -3,7 +3,7 @@
 作者：刘明焘
 创建日期：2026-05-30
 最后修改：2026-05-31
-版本：1.1
+版本：1.2
 描述：统计CSV文件中任务时间总和并计算小时数
 """
 import csv
@@ -80,6 +80,18 @@ def clearScreen():
         os.system('cls')
     else:
         os.system('clear')
+def fileIsExist():
+    files = os.listdir()
+    print(files)
+    flag = 0
+    for file in files:
+        if file == 'count.csv':
+            flag = 1
+            continue
+    if flag == 0:
+        print('请先使用read_recording_info.py插入时长并创建cvs文件')    
+        return 0
 if __name__ == "__main__":
+    # fileIsExist()
     setupColor()
     initAndCalculateHours()

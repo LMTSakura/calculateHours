@@ -6,6 +6,8 @@
         chmod -x monitor.sh
         sudo bash monitor.sh
 !
+# 第一条还没有插过时长，先调用autotime.sh插一条
+bash autoTime.sh
 # 切目录
 cd /opt/linkerhand/ws_src/collection_data
 # 切环境
